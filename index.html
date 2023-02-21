@@ -1,8 +1,46 @@
+<!DOCTYPE html>
 <html>
-    <header>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Website</title>
+	<style>
+		/* PC styles */
+		@media (min-width: 768px) {
+			.pc-page {
+				display: block;
+			}
+			.mobile-page {
+				display: none;
+			}
+		}
+		
+		/* Mobile styles */
+		@media (max-width: 767px) {
+			.pc-page {
+				display: none;
+			}
+			.mobile-page {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="pc-page">
+		<!-- PC page content goes here -->
+		<h1>This is the PC page</h1>
+		<p>Welcome to the PC version of our website</p>
+	</div>
+	
+	<div class="mobile-page">
+		<!-- Mobile page content goes here -->
+		<h1>This is the mobile page</h1>
+		<p>Welcome to the mobile version of our website</p>
+	</div>
 
-    </header>
-    <body>
-        test8
-    </body>
+	<script>
+		// Hide mobile page content by default
+		document.querySelector('.mobile-page').style.display = 'none';
+	</script>
+</body>
 </html>
