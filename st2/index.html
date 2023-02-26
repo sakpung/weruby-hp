@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Redirect Page</title>
+	<script>
+		// Redirect to PC page if device is not mobile
+		if (!/Mobi/.test(navigator.userAgent)) {
+			window.location.replace("./pc/index.html");
+		}
+		
+		// Redirect to mobile page if device is mobile
+		if (/Mobi/.test(navigator.userAgent)) {
+			window.location.replace("./mobile/index.html");
+		}
+	</script>
+</head>
+<body>
+	<p>Please wait while we redirect you to the appropriate page...</p>
+</body>
+</html>
