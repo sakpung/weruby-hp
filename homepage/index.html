@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Redirect Page</title>
-	<script>
-		// Redirect to mobile page if device is mobile
-		if (/Mobi/.test(navigator.userAgent)) {
-			window.location.replace("./mobile/index.html");
+	<meta charset="UTF-8">
+	<title>우리들녹지국제병원</title>
+	<style>
+		body {
+			background-color: #ffffff;
+			margin: 0;
+			padding: 0;
+		}	
+		.all-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
-		// Redirect to PC page if device is not mobile
-		// if (!/Mobi/.test(navigator.userAgent)) {
-		else {
-			window.location.replace("./pc/index.html");
+
+		table {
+			width: 100%;
+			border-spacing: 0;
 		}
-	</script>
+
+		th {
+			width: 100%;
+			padding: 0;
+			border: none;
+		}
+
+		.img-section {
+			display: table-cell; 
+			text-align: center; 
+			vertical-align: middle;
+		}
+	</style>
+
 </head>
-<body>
-	<p>Please wait while we redirect you to the appropriate page...</p>
+<body class="all-section">
+	<table>
+		<tr>
+			<th class="img-section">
+				<img id="imgId" style="width: 100%;">
+			</th>
+		</tr>
+	</table>
+<script type="text/javascript">
+    // Redirect to mobile page if device is mobile
+    if (/Mobi/.test(navigator.userAgent)) {
+        document.getElementById("imgId").src = "./mobile/img/mo01.jpg";
+    }
+    // Redirect to PC page if device is not mobile
+    // if (!/Mobi/.test(navigator.userAgent)) {
+    else {
+        document.getElementById("imgId").src = "./pc/img/pc01.jpg";
+    }
+</script>
 </body>
 </html>
